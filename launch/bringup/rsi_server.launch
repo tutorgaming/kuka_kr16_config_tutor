@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <arg name="sim" default="true" />
+
+    <!-- IP Config for kuka rsi_simulator -->
+    <rosparam file="$(find kuka_rsi_hw_interface)/test/test_params_sim.yaml" command="load" if="$(arg sim)"/>
+    <rosparam file="$(find kuka_rsi_hw_interface)/test/test_params.yaml" command="load" unless="$(arg sim)"/>
+    <!-- Load RSI simulation node -->
+    <node name='kuka_rsi_simulator' pkg='kuka_rsi_simulator' type="kuka_rsi_simulator" args="127.0.0.1 49152" if="$(arg sim)" />
+
+</launch>

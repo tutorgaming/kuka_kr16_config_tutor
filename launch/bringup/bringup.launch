@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!--
+    Kuka KR16 Interface
+    Author : Theppasith N. <theppasith.n@hiveground.com>
+    Dependencies :
+        - kuka_experimental ROS Repo
+        - kuka_rsi_hw_interface (from kuka_experimental)
+        - kuka_kr16_support (from kuka_experimental) -->
+    <!-- RUN RSI SERVER / SIM -->
+    <include file="$(find kuka_kr16_config_tutor)/launch/bringup/rsi_server.launch" />
+    <!-- LOAD ROBOT CONTROLLER -->
+    <include file="$(find kuka_kr16_config_tutor)/launch/bringup/hardware_controller.launch">
+        <param name="sim" value="true"/>
+    </include>
+
+    <!-- MoveIt! KR16 -->
+    <include file="$(find kuka_kr16_config_tutor)/launch/start_moveit_kr16.launch" />
+</launch>
