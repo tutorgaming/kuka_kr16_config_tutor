@@ -13,13 +13,14 @@ MoveIt! Configuration Example file for Controling **KUKA KR16** Over RSI XML.
 	>sudo apt install ros-melodic-joint-* ros-melodic-effort-controllers 
 	>sudo apt install ros-melodic-position-controllers
 
-- [kuka_experimental ROS Package](https://github.com/ros-industrial/kuka_experimental)
+- [kuka_experimental ROS Package ](https://github.com/ros-industrial/kuka_experimental)
 	- kuka_rsi_hw_interface
 	- kuka_kr16_support 
 	
-Create the catkin workspace first -> below src folder inside catkin workspace
-> git clone https://github.com/ros-industrial/kuka_experimental.git
+	Create the catkin workspace first -> below src folder inside catkin workspace
+	> git clone https://github.com/ros-industrial/kuka_experimental.git
 
 # Launching 
 Bringup the Robot Controller -> RSI Server -> MoveIt!
 > roslaunch kuka_kr16_config_tutor bringup.launch
+
