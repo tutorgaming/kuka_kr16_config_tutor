@@ -19,3 +19,7 @@ MoveIt! Configuration Example file for Controling **KUKA KR16** Over RSI XML.
 	
 Create the catkin workspace first -> below src folder inside catkin workspace
 > git clone https://github.com/ros-industrial/kuka_experimental.git
+
+# Launching 
+Bringup the Robot Controller -> RSI Server -> MoveIt!
+> roslaunch kuka_kr16_config_tutor bringup.launch
